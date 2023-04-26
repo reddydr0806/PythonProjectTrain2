@@ -40,7 +40,7 @@ assert Account_check.text == '1005'
 print('Account Number is matching with Account selected')
 
 Balance_Check = driver.find_element(By.XPATH, "/html/body/div/div/div[2]/div/div[2]/strong[2]")
-print(Balance_Check.text)
+print("Your current Account balance is :", Balance_Check.text)
 
 click_withdraw = driver.find_element(By.XPATH, "/html/body/div/div/div[2]/div/div[3]/button[3]").click()
 time.sleep(2)
@@ -50,15 +50,20 @@ withdraw_amount = driver.find_element(By.XPATH, "/html/body/div/div/div[2]/div/d
 
 withdraw_message = driver.find_element(By.XPATH, "/html/body/div/div/div[2]/div/div[4]/div/span")
 # assert withdraw_message.text == 'Transaction successful'
-print(withdraw_message.text)
+print("Withdrawl status :", withdraw_message.text)
 
 if withdraw_message.text == 'Transaction successful':
     print("Withdrawl was success")
 else:
     print('Please enter the lower amount')
 
+#Chekc the Updated balance after withdrawl
+updated_balance = driver.find_element(By.XPATH, "/html/body/div/div/div[2]/div/div[2]/strong[2]")
+print("New updated Balance of your account is :",  updated_balance.text)
 
+# Project Automation Closure
 print("Practice project successfully closed")
-# ClickLogin = driver.find_element(By.XPATH, "//button[@type='submit']").click()
 
 time.sleep(3)
+
+driver.quit()
