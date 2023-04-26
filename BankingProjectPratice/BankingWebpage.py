@@ -44,7 +44,7 @@ print(Balance_Check.text)
 
 click_withdraw = driver.find_element(By.XPATH, "/html/body/div/div/div[2]/div/div[3]/button[3]").click()
 time.sleep(2)
-enter_withdrawamount = driver.find_element(By.XPATH, "/html/body/div/div/div[2]/div/div[4]/div/form/div/input").send_keys('6000')
+enter_withdrawamount = driver.find_element(By.XPATH, "/html/body/div/div/div[2]/div/div[4]/div/form/div/input").send_keys('2000')
 
 withdraw_amount = driver.find_element(By.XPATH, "/html/body/div/div/div[2]/div/div[4]/div/form/button").click()
 
@@ -58,7 +58,7 @@ else:
     print('Please enter the lower amount')
 
 
-
+print("Practice project successfully closed")
 # ClickLogin = driver.find_element(By.XPATH, "//button[@type='submit']").click()
 
 time.sleep(3)
