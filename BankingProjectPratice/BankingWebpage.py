@@ -58,7 +58,7 @@ else:
     print('Please enter the lower amount')
 
 
-
+print("Practice project successfully closed")
 # ClickLogin = driver.find_element(By.XPATH, "//button[@type='submit']").click()
 
 time.sleep(3)
